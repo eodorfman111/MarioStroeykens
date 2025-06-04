@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/gallery.css';
+import Hero from '../components/Hero';
 import img1 from '../assets/images/1.jpg';
 import img2 from '../assets/images/2.jpg';
 import img3 from '../assets/images/3.jpg';
@@ -12,6 +13,7 @@ import img8 from '../assets/images/8.jpg';
 const Home = () => {
   return (
     <div>
+      <Hero />
       <section>
         <h2>On the Field</h2>
         <div className="gallery-grid">
