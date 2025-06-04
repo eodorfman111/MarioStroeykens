@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f8f8f6;
+  color: #111;
+  line-height: 1.6;
+}
+
+.app {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 260px;
+  padding: 2rem;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ddd;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.sidebar nav a:hover {
+  color: #777;
+}
+
+.logo {
+  width: 120px; /* Increased from 90px */
+  margin-bottom: 2rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.2);
+  filter: drop-shadow(0 0 5px gold);
+}
+
+body.dark {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark .sidebar {
+  background-color: #181818;
+  border-right: 1px solid #333;
+}
+
+body.dark a {
+  color: #eee;
+}
+
+body.dark a:hover {
+  color: #aaa;
+}
+
+/* Gallery Image */
+.gallery-img {
+  width: 100%;
+  transition: transform 0.4s ease;
+  border-radius: 0; /* Removed curved corners */
+}
+
+.gallery-img:hover {
+  transform: scale(1.04);
+}
+
+/* About Page Banner */
+.about-banner {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}

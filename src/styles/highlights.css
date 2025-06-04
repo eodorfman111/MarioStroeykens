@@ -1,0 +1,30 @@
+.highlights {
+    padding: 2rem;
+  }
+  
+  .video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .video-card {
+    flex: 1 1 300px;
+    max-width: 500px;
+  }
+  
+  .video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
