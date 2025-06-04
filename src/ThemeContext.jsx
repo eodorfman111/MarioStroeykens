@@ -3,15 +3,24 @@ import { createContext, useState, useEffect } from 'react';
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem('darkMode');
-    return saved ? JSON.parse(saved) : true;
-  });
-
-  const toggleTheme = () => setDarkMode(prev => !prev);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    const saved = localStorage.getItem('darkMode');
+    if (saved !== null) {
+      setDarkMode(JSON.parse(saved));
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    setDarkMode(prev => {
+      const updated = !prev;
+      localStorage.setItem('darkMode', JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  useEffect(() => {
     document.body.className = darkMode ? 'dark' : 'light';
   }, [darkMode]);
 
