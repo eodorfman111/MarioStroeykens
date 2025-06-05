@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import actionImg from "../assets/images/12.jpg";
-import nikeIcon from "../assets/icons/nike.svg";
 import "../index.css";
 
 const milestones = [
@@ -32,6 +31,7 @@ const milestones = [
 ];
 
 const Career = () => {
+  const [active, setActive] = useState(null);
   useEffect(() => {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(e => {
@@ -52,17 +52,17 @@ const Career = () => {
         <img src={actionImg} alt="Mario Stroeykens in action" style={{ width: '100%' }} loading="lazy" />
       </div>
       <ul className="career-timeline">
-        {milestones.map(m => (
-          <li key={m.season} className="fade-scroll" data-stats={m.stats}>
+        {milestones.map((m, i) => (
+          <li
+            key={m.season}
+            className="fade-scroll milestone"
+            data-stats={m.stats}
+            onClick={() => setActive(active === i ? null : i)}
+          >
             <h3>{m.season}</h3>
-            <p>{m.text}</p>
+            {active === i && <p className="details">{m.text}</p>}
           </li>
         ))}
-        <li className="fade-scroll" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <img src={nikeIcon} alt="Nike" style={{ width: 24, height: 24 }} />
-          <h3 style={{ margin: 0 }}>Nike Partnership</h3>
-          <p style={{ marginTop: '0.5rem' }}>Officially endorsed by Nike since 2023; regularly appears in Nike campaign shoots wearing the latest boots and gear. Demonstrates on-field performance and off-field style, embodying the brand’s “Young &amp; Fearless” ethos.</p>
-        </li>
       </ul>
     </div>
   );

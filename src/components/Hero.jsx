@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1>Mario Stroeykens</h1>
         <p>Official Website</p>
-        <a href="/about" className="hero-btn">Learn More</a>
+        <a href="#see-more" className="hero-btn">See More</a>
       </div>
     </section>
   );

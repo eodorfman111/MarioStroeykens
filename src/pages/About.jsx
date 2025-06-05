@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import heroImage from "../assets/images/14.jpg";
 import headshot from "../assets/images/13.jpg";
 import "../index.css";
 
@@ -19,9 +18,6 @@ const About = () => {
 
   return (
     <div className="about">
-      <div className="about-banner" style={{ backgroundImage: `url(${heroImage})` }}>
-        <div className="about-overlay" />
-      </div>
       <div className="fade-scroll" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', marginTop: '2rem' }}>
         <div style={{ flex: '1 1 300px' }}>
           <h1>About Mario Stroeykens</h1>

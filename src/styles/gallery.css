@@ -12,6 +12,11 @@
   transition: transform 0.4s ease;
 }
 
+.off-field .gallery-img {
+  height: 280px;
+  object-fit: cover;
+}
+
 .gallery-img:hover {
   transform: scale(1.04);
 }
