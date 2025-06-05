@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
-import bg from "../assets/images/10.jpg";
 import "../styles/highlights.css";
 
 const videos = [
@@ -25,7 +24,7 @@ const Highlights = () => {
   }, []);
 
   return (
-    <div className="highlights" style={{ backgroundImage: `url(${bg})` }}>
+    <div className="highlights">
       <h1 className="fade-scroll">Watch the Best of Mario Stroeykens</h1>
       <p className="fade-scroll">Explore Mario’s most electrifying moments—from his first senior goal to jaw-dropping match-winners. Click any clip to relive the action in full.</p>
       <div className="video-grid">

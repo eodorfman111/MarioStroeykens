@@ -3,10 +3,11 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import ThemeToggle from "./ThemeToggle";
 
-const Sidebar = () => {
+const Sidebar = ({ open, onToggle }) => {
   return (
-    <div className="sidebar">
+    <div className={`sidebar${open ? ' open' : ''}`}>
       <img src={logo} alt="Logo" className="logo" />
+      <button className="close-btn" onClick={onToggle}>✕</button>
       <nav>
         <NavLink to="/" end>Home</NavLink>
         <NavLink to="/about">About</NavLink>

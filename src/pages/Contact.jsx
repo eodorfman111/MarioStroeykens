@@ -42,8 +42,9 @@ const Contact = () => {
           <img src={xIcon} alt="X" />
         </a>
       </div>
+      <p className="social-caption fade-scroll">Follow Mario</p>
       <p className="fade-scroll">Whether you’re a fan, a brand partner, or a member of the media, we’d love to hear from you. Drop Mario a message using the form below or connect via social media.</p>
-      <form onSubmit={handleSubmit} className="fade-scroll" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <form onSubmit={handleSubmit} className="fade-scroll contact-form">
         <div>
           <label>Name</label>
           <input name="name" value={form.name} onChange={handleChange} required />
