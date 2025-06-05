@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 html, body {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
   background-color: #f8f8f6;
   color: #111;
   line-height: 1.6;
@@ -93,6 +93,18 @@ body.dark a:hover {
   color: #aaa;
 }
 
+/* Fade-in on scroll */
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-scroll.show {
+  opacity: 1;
+  transform: none;
+}
+
 /* Gallery Image */
 .gallery-img {
   width: 100%;
@@ -104,6 +116,22 @@ body.dark a:hover {
 
 .gallery-img:hover {
   transform: scale(1.04);
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #5b2a91;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6d3aa5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* About Page Banner */
@@ -139,6 +167,7 @@ body.dark a:hover {
 
 .social-icons img:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(128, 0, 128, 0.5);
 }
 
 /* About Page */
