@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import MobileMenu from "./components/MobileMenu";
+import ScrollToTop from "./components/ScrollToTop";
 import "./index.css";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
       )}
       <div className="main-content">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

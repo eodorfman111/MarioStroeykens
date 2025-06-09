@@ -45,6 +45,7 @@ p {
 .hamburger img {
   width: 32px;
   height: 32px;
+  filter: invert(1);
 }
 
 .main-content {
@@ -69,7 +70,7 @@ p {
     left: 0;
     width: 100vw;
     height: 56px;
-    background: #333;
+    background: #000;
     color: #fff;
     align-items: center;
     justify-content: space-between;
@@ -296,6 +297,15 @@ body.dark a:hover {
   margin: 0 auto;
 }
 
+.about h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.about p {
+  line-height: 1.7;
+}
+
 .about-text h1 {
   font-size: 2.2rem;
 }
@@ -323,7 +333,7 @@ body.dark a:hover {
 }
 
 .career-timeline li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -332,9 +342,9 @@ body.dark a:hover {
   position: absolute;
   left: -6px;
   top: 0.4em;
-  width: 8px;
-  height: 8px;
-  background-color: currentColor;
+  width: 6px;
+  height: 6px;
+  background-color: #d4af37;
   border-radius: 50%;
 }
 
