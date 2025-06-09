@@ -25,6 +25,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <div className="hero-divider" />
       <section id="see-more" className="fade-scroll">
         <h2>On the Field</h2>
         <ImageCarousel
