@@ -5,15 +5,7 @@ import heroPoster from '../assets/mario-hero.jpg';
 
 const Hero = () => {
   const handleSeeMore = () => {
-    if (window.innerWidth <= 768) {
-      const target = document.getElementById('see-more');
-      if (target) {
-        const y = target.getBoundingClientRect().top + window.pageYOffset - 56;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-    } else {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+    document.getElementById('see-more')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
