@@ -1,3 +1,8 @@
+.carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .carousel-track {
   display: flex;
   overflow-x: auto;
@@ -37,6 +42,7 @@
   }
   .carousel-img {
     flex: none;
+    width: 100%;
   }
   .carousel-dots {
     display: none;
