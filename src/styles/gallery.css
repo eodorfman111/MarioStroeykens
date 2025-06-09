@@ -13,8 +13,11 @@
 }
 
 .off-field .gallery-img {
-  height: auto;
+  width: 400px;
+  height: 600px;
   object-fit: contain;
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
 
 .gallery-img:hover {

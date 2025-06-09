@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/gallery.css';
+import ImageCarousel from './ImageCarousel';
 import img1 from '../assets/images/1.jpg';
 import img2 from '../assets/images/2.jpg';
 import img3 from '../assets/images/3.jpg';
@@ -14,21 +15,11 @@ const OnOffFieldGallery = () => {
     <div>
       <section>
         <h2>On the Field</h2>
-        <div className="gallery-grid">
-          <img src={img1} alt="On Field 1" className="gallery-img" />
-          <img src={img2} alt="On Field 2" className="gallery-img" />
-          <img src={img3} alt="On Field 3" className="gallery-img" />
-          <img src={img4} alt="On Field 4" className="gallery-img" />
-        </div>
+        <ImageCarousel images={[img1, img2, img3, img4]} className="on-field" />
       </section>
       <section>
         <h2>Off the Field</h2>
-        <div className="gallery-grid">
-          <img src={img5} alt="Off Field 1" className="gallery-img" />
-          <img src={img6} alt="Off Field 2" className="gallery-img" />
-          <img src={img7} alt="Off Field 3" className="gallery-img" />
-          <img src={img8} alt="Off Field 4" className="gallery-img" />
-        </div>
+        <ImageCarousel images={[img5, img6, img7, img8]} className="off-field" />
       </section>
     </div>
   );
