@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import headshot from "../assets/images/13.jpg";
 import "../index.css";
 
 const About = () => {
@@ -21,9 +20,7 @@ const About = () => {
       <div className="fade-scroll" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', marginTop: '2rem' }}>
         <div style={{ flex: '1 1 300px' }}>
           <h1>About Mario Stroeykens</h1>
-          <h2>From Zellik to Purple-and-White: A Story of Heart and Hustle</h2>
         </div>
-        <img src={headshot} alt="Mario Stroeykens smiling" style={{ width: '250px', marginLeft: '1rem', borderRadius: '8px' }} loading="lazy" />
       </div>
       <div className="fade-scroll">
         <p><strong>Born on September 29, 2004, in Zellik, Belgium</strong>, Mario Stroeykens grew up in a sports-loving family with a Belgian father and Congolese mother. From the moment he kicked his first ball, it was clear football ran in his blood. As a young child, Mario joined local side Toekomst Relegem, where coaches noticed his vision, technique, and fearless style on the pitch.</p>

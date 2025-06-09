@@ -42,9 +42,6 @@ const Highlights = () => {
           <YouTube videoId={open.id} opts={{ width: '80%', height: '60%' }} />
         </div>
       )}
-      <p className="fade-scroll" style={{ marginTop: '1rem' }}>
-        Subscribe to <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Mario’s official YouTube channel</a> for more highlights.
-      </p>
     </div>
   );
 };
