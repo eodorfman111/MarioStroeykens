@@ -1,19 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/hero.css';
 import heroVideo from '../assets/images/mariovideo/mariovideo.mp4';
 import heroPoster from '../assets/mario-hero.jpg';
 
 const Hero = () => {
+  const navigate = useNavigate();
   const handleSeeMore = () => {
-    if (window.innerWidth <= 768) {
-      const target = document.getElementById('see-more');
-      if (target) {
-        const y = target.getBoundingClientRect().top + window.pageYOffset - 56;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-    } else {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
+    navigate('/highlights');
   };
 
   return (
@@ -34,7 +28,7 @@ const Hero = () => {
         <h1>Mario Stroeykens</h1>
         <p>Official Website</p>
         <button type="button" className="hero-btn" onClick={handleSeeMore}>
-          See More
+          Explore Highlights
         </button>
       </div>
     </section>
