@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
@@ -9,6 +9,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .hero-video {
@@ -29,7 +30,8 @@
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 2;
   height: 100%;
   display: flex;
@@ -38,7 +40,7 @@
   align-items: center;
   text-align: center;
   color: #fff;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .hero-content h1 {
@@ -70,12 +72,12 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: auto;
+    height: calc(100vh - 56px);
     padding-top: 56px;
   }
   .hero .video-wrapper {
-    padding-bottom: 56.25%;
-    height: 0;
+    height: 100%;
+    padding-bottom: 0;
   }
   .hero-overlay {
     display: block;
