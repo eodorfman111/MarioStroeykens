@@ -13,8 +13,8 @@
 }
 
 .off-field .gallery-img {
-  height: 280px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .gallery-img:hover {

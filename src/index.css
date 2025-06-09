@@ -178,6 +178,7 @@ body.dark a:hover {
   color: #fff;
   border: none;
   border-radius: 4px;
+  font-family: 'Playfair Display', serif;
   cursor: pointer;
   min-width: 44px;
   min-height: 44px;
@@ -255,7 +256,6 @@ body.dark a:hover {
 .career-timeline li {
   margin-bottom: 0.75rem;
   position: relative;
-  cursor: pointer;
 }
 
 .career-timeline li::before {
@@ -306,6 +306,7 @@ body.dark a:hover {
   border: 1px solid #ccc;
   background: rgba(255,255,255,0.85);
   padding: 0.5rem;
+  width: 100%;
 }
 
 .contact-form label {

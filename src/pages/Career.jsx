@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import actionImg from "../assets/images/12.jpg";
+import React, { useEffect } from "react";
 import "../index.css";
 
 const milestones = [
@@ -31,7 +30,6 @@ const milestones = [
 ];
 
 const Career = () => {
-  const [active, setActive] = useState(null);
   useEffect(() => {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(e => {
@@ -48,19 +46,15 @@ const Career = () => {
   return (
     <div className="career">
       <h1 className="fade-scroll">Career Highlights &amp; Milestones</h1>
-      <div className="fade-scroll" style={{ maxWidth: '400px', marginBottom: '1rem' }}>
-        <img src={actionImg} alt="Mario Stroeykens in action" style={{ width: '100%' }} loading="lazy" />
-      </div>
       <ul className="career-timeline">
-        {milestones.map((m, i) => (
+        {milestones.map(m => (
           <li
             key={m.season}
             className="fade-scroll milestone"
             data-stats={m.stats}
-            onClick={() => setActive(active === i ? null : i)}
           >
             <h3>{m.season}</h3>
-            {active === i && <p className="details">{m.text}</p>}
+            <p className="details">{m.text}</p>
           </li>
         ))}
       </ul>
