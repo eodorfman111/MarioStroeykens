@@ -4,6 +4,10 @@ import heroVideo from '../assets/images/mariovideo/mariovideo.mp4';
 import heroPoster from '../assets/mario-hero.jpg';
 
 const Hero = () => {
+  const handleSeeMore = () => {
+    document.getElementById('see-more')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="hero">
       <div className="video-wrapper">
@@ -21,7 +25,9 @@ const Hero = () => {
       <div className="hero-content">
         <h1>Mario Stroeykens</h1>
         <p>Official Website</p>
-        <a href="#see-more" className="hero-btn">See More</a>
+        <button type="button" className="hero-btn" onClick={handleSeeMore}>
+          See More
+        </button>
       </div>
     </section>
   );
