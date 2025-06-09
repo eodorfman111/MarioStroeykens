@@ -1,13 +1,13 @@
 .hero {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 }
 .hero .video-wrapper {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 
@@ -29,12 +29,13 @@
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
@@ -83,5 +84,11 @@
 
   .hero-content {
     display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-content {
+    left: calc(50vw - 260px);
   }
 }
