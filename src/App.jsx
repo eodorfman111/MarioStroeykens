@@ -6,30 +6,32 @@ import Career from "./pages/Career";
 import Highlights from "./pages/Highlights";
 import Contact from "./pages/Contact";
 import Sidebar from "./components/Sidebar";
-import menuIcon from './assets/images/54206.png';
+import Header from "./components/Header";
+import MobileMenu from "./components/MobileMenu";
 import "./index.css";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
   useEffect(() => {
-    const onResize = () => {
-      if (window.innerWidth >= 768) {
-        setMenuOpen(true);
-      } else {
-        setMenuOpen(false);
-      }
-    };
-    onResize();
+    const onResize = () => setWidth(window.innerWidth);
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
+  const isMobile = width < 768;
+
   return (
     <div className="app">
-      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <img src={menuIcon} alt="Menu" />
-      </button>
-      <Sidebar open={menuOpen} onToggle={() => setMenuOpen(!menuOpen)} />
+      {isMobile ? (
+        <Header onMenuToggle={() => setMenuOpen(!menuOpen)} />
+      ) : (
+        <Sidebar open />
+      )}
+      {isMobile && (
+        <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+      )}
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />

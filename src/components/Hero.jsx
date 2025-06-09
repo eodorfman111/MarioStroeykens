@@ -6,15 +6,17 @@ import heroPoster from '../assets/mario-hero.jpg';
 const Hero = () => {
   return (
     <section className="hero">
-      <video
-        className="hero-video"
-        src={heroVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster={heroPoster}
-      />
+      <div className="video-wrapper">
+        <video
+          className="hero-video"
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={heroPoster}
+        />
+      </div>
       <div className="hero-overlay" />
       <div className="hero-content">
         <h1>Mario Stroeykens</h1>
