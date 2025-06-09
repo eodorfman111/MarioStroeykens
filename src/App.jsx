@@ -6,6 +6,7 @@ import Career from "./pages/Career";
 import Highlights from "./pages/Highlights";
 import Contact from "./pages/Contact";
 import Sidebar from "./components/Sidebar";
+import menuIcon from './assets/images/54206.png';
 import "./index.css";
 
 function App() {
@@ -25,8 +26,10 @@ function App() {
 
   return (
     <div className="app">
-      <button className="hamburger" onClick={() => setMenuOpen(true)}>☰</button>
-      <Sidebar open={menuOpen} onToggle={() => setMenuOpen(false)} />
+      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <img src={menuIcon} alt="Menu" />
+      </button>
+      <Sidebar open={menuOpen} onToggle={() => setMenuOpen(!menuOpen)} />
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
