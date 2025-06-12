@@ -50,10 +50,10 @@ p {
 
 .main-content {
   margin-left: 260px;
+  width: calc(100% - 260px);
   padding: 2rem;
   flex: 1;
   min-height: 100vh;
-  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -88,6 +88,7 @@ p {
   }
   .main-content {
     margin-left: 0;
+    width: 100%;
     padding: 1rem;
     padding-top: 56px;
   }
