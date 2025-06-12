@@ -43,7 +43,6 @@
   }
 }
 .carousel.off-field .carousel-img {
-  object-fit: contain;
-  padding: 0.5rem;
-  box-sizing: border-box;
+  object-fit: cover;
+  padding: 0;
 }
