@@ -1,13 +1,13 @@
 .hero {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
 }
 .hero .video-wrapper {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 
@@ -70,12 +70,12 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: auto;
-    padding-top: 56px;
+    height: 100vh;
+    padding-top: 0;
   }
   .hero .video-wrapper {
-    padding-bottom: 56.25%;
-    height: 0;
+    padding-bottom: 0;
+    height: 100%;
   }
   .hero-overlay {
     display: block;
