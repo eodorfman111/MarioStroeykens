@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 import "../styles/highlights.css";
+import "../styles/hero.css"; // ensure hero background video displays
 import highlightVideo from "../assets/images/mariovideo/mariohighlights.mp4";
 import heroPoster from "../assets/mario-hero.jpg";
 
