@@ -1,4 +1,8 @@
 
+.highlights {
+  padding: 2rem;
+}
+
 .highlight-hero {
   height: auto;
   min-height: 100vh;
@@ -18,7 +22,7 @@
   text-align: center;
 }
 
-.highlight-hero .video-grid {
+.highlights .video-grid {
   margin-top: 2rem;
 }
 
