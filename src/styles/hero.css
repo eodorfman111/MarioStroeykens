@@ -72,6 +72,9 @@
   .hero {
     height: 100vh;
     padding-top: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    width: calc(100% + 2rem);
   }
   .hero .video-wrapper {
     padding-bottom: 0;

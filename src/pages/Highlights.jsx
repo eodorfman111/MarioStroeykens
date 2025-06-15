@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 import "../styles/highlights.css";
+import highlightVideo from "../assets/images/mariovideo/mariohighlights.mp4";
+import heroPoster from "../assets/mario-hero.jpg";
 
 const videos = [
   { id: "Onwz6V1em98", title: "Career Compilation", caption: "All the best plays, goals, and assists in one epic reel." },
@@ -24,24 +26,43 @@ const Highlights = () => {
   }, []);
 
   return (
-    <div className="highlights">
-      <h1 className="fade-scroll">Watch the Best of Mario Stroeykens</h1>
-      <p className="fade-scroll">Explore Mario’s most electrifying moments—from his first senior goal to jaw-dropping match-winners. Click any clip to relive the action in full.</p>
-      <div className="video-grid">
-        {videos.map(v => (
-          <div key={v.title} className="thumb fade-scroll" onClick={() => setOpen(v)}>
-            <img src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`} alt={v.title} loading="lazy" />
-            <span className="play">▶</span>
-            <h3>{v.title}</h3>
-            <p>{v.caption}</p>
-          </div>
-        ))}
-      </div>
-      {open && (
-        <div className="lightbox" onClick={() => setOpen(null)}>
-          <YouTube videoId={open.id} opts={{ width: '80%', height: '60%' }} />
+    <div>
+      <section className="hero highlight-hero">
+        <div className="video-wrapper">
+          <video
+            className="hero-video"
+            src={highlightVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={heroPoster}
+          />
         </div>
-      )}
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <h1>Watch the Best of Mario Stroeykens</h1>
+          <p>Explore Mario’s most electrifying moments—from his first senior goal to jaw-dropping match-winners. Click any clip to relive the action in full.</p>
+        </div>
+      </section>
+      <div className="hero-divider" />
+      <div className="highlights">
+        <div className="video-grid">
+          {videos.map(v => (
+            <div key={v.title} className="thumb fade-scroll" onClick={() => setOpen(v)}>
+              <img src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`} alt={v.title} loading="lazy" />
+              <span className="play">▶</span>
+              <h3>{v.title}</h3>
+              <p>{v.caption}</p>
+            </div>
+          ))}
+        </div>
+        {open && (
+          <div className="lightbox" onClick={() => setOpen(null)}>
+            <YouTube videoId={open.id} opts={{ width: '80%', height: '60%' }} />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
