@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 import "../styles/highlights.css";
+import highlightVideo from "../assets/images/mariovideo/mariohighlights.mp4";
 
 const videos = [
   { id: "Onwz6V1em98", title: "Career Compilation", caption: "All the best plays, goals, and assists in one epic reel." },
   { id: "NqBh_OGqK7w", title: "First Senior Goal – Oct 9, 2022", caption: "Mario’s composed finish vs KV Mechelen to open his scoring account." },
   { id: "tvkzzhwHmSw", title: "Cup Stunner vs Standard Liège – Dec 7, 2023", caption: "A 25-yard rocket in the Belgian Cup that left fans speechless." },
-  { id: "Onwz6V1em98", title: "Last-Minute Winner vs STVV – July 21, 2024", caption: "Mario’s 92nd-minute beauty to secure a 1–0 win on opening day." },
-  { id: "IPGFAr7jJ3o", title: "Belgium U21 Highlight", caption: "A glimpse of Mario’s magic on the international stage." }
+  { id: "Onwz6V1em98", title: "Last-Minute Winner vs STVV – July 21, 2024", caption: "Mario’s 92nd-minute beauty to secure a 1–0 win on opening day." }
 ];
 
 const Highlights = () => {
@@ -25,6 +25,14 @@ const Highlights = () => {
 
   return (
     <div className="highlights">
+      <video
+        className="highlights-bg-video"
+        src={highlightVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       <h1 className="fade-scroll">Watch the Best of Mario Stroeykens</h1>
       <p className="fade-scroll">Explore Mario’s most electrifying moments—from his first senior goal to jaw-dropping match-winners. Click any clip to relive the action in full.</p>
       <div className="video-grid">
