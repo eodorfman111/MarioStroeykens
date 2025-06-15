@@ -68,6 +68,10 @@
   background: rgba(0,0,0,0.2);
 }
 
+.highlight-hero .hero-content {
+  position: relative;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: 100vh;
