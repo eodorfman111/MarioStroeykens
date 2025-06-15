@@ -46,25 +46,30 @@ const Highlights = () => {
   }, []);
 
   return (
-    <section className="hero highlight-hero">
-      <div className="video-wrapper">
-        <video
-          className="hero-video"
-          src={highlightVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={heroPoster}
-        />
-      </div>
-      <div className="hero-overlay" />
-      <div className="hero-content">
-        <h1>Watch the Best of Mario Stroeykens</h1>
-        <p>
-          Explore Mario’s most electrifying moments—from his first senior goal to
-          jaw-dropping match-winners. Click any clip to relive the action in full.
-        </p>
+    <div>
+      <section className="hero highlight-hero">
+        <div className="video-wrapper">
+          <video
+            className="hero-video"
+            src={highlightVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={heroPoster}
+          />
+        </div>
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <h1>Watch the Best of Mario Stroeykens</h1>
+          <p>
+            Explore Mario’s most electrifying moments—from his first senior goal to
+            jaw-dropping match-winners. Click any clip to relive the action in full.
+          </p>
+        </div>
+      </section>
+      <div className="hero-divider" />
+      <div className="highlights">
         <div className="video-grid">
           {videos.map(v => (
             <div
@@ -89,7 +94,7 @@ const Highlights = () => {
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 
