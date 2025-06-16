@@ -3,12 +3,27 @@
   padding: 2rem;
 }
 
+
 .highlight-hero {
+  position: relative;
   height: auto;
   min-height: 100vh;
 }
 
+.highlight-hero .video-wrapper,
 .highlight-hero .hero-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.highlight-hero .video-wrapper {
+  z-index: -2;
+}
+
+.highlight-hero .hero-overlay {
+  z-index: -1;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
 }
 
@@ -20,6 +35,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.highlight-hero .highlights {
+  position: relative;
+  z-index: 2;
 }
 
 .highlights .video-grid {
